@@ -1,0 +1,66 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+import java.awt.Color;
+import java.awt.Graphics;
+import javax.swing.JApplet;
+
+/**
+ *
+ * @author t.bohl
+ */
+public class Pile {
+
+    private int initialCount;
+    private int count;
+    private int xPosition;
+    private int yPosition;
+    private int diameter;
+    private Color color;
+
+    public void drawBall(Graphics g) {
+        g.setColor(color);
+        g.fillOval(xPosition, yPosition, diameter, diameter);
+    }
+
+    public Pile(int initialCount) {
+        count = initialCount;
+    }
+
+    public int getSize() {
+        return count;
+    }
+
+    public void remove(int count) {
+        this.count -= count;
+    }
+
+    public void drawPile(Graphics g, int x, int y) 
+    {
+        x = xPosition;
+        y = yPosition;
+        g.drawOval(1, 1, 1, 1) * initialCount;
+
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
+    }
+
+    public void setXPosition(int x) {
+        xPosition = x;
+    }
+
+    public void setYPosition(int y) {
+        yPosition = y;
+    }
+
+    public Graphics printPile() 
+    {
+        return "*" * count;
+    }
+
+}

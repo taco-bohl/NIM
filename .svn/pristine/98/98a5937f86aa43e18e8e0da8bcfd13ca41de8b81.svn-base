@@ -1,0 +1,51 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author t.bohl
+ */
+public class Player {
+    private String name;
+    private int idealMoveProbability;
+    private int pileSize;
+    private boolean isComputerControlled;
+    
+    public Player(String name)
+    {
+        this.name = name;
+    }
+    
+    public Player(String name, int idealMoveProbability)
+    {
+        this.name = name;
+        this.idealMoveProbability = idealMoveProbability;
+    }
+    
+    public String getName()
+    {
+        return name;
+    }
+    
+    public void setComputerControlled(boolean set)
+    {
+        isComputerControlled = set;
+    }
+    
+    public boolean isComputerControlled()
+    {
+        return isComputerControlled;
+    }
+    
+    public int takeTurn()
+    {
+        if (idealMoveProbability == 100)
+    }
+          
+    
+  
+    
+}
